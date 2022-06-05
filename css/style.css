@@ -1,2 +1,87 @@
 @import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Karla:wght@300&family=Ubuntu:wght@400;700&display=swap');
+
+/* font-family: 'Concert One', cursive;
+   font-family: 'Karla', sans-serif;
+   font-family: 'Ubuntu', sans-serif; */
+
+header{
+    display: inline-block;
+   text-align: center;
+   background-color: burlywood;
+   width: 100vw;
+   height: 220px;
+   
+}
+
+header>h1{
+  padding: 20px;
+  font-size: 41px;
+  font-family: 'Concert One', cursive;
+  text-align: left;
+  padding-left: 130px;
+
+}
+
+header>h2{
+    font-size: 35px;
+    margin-bottom: 45px;
+    
+
+}
+
+header>span{
+    background-color: black;
+    color: aliceblue;
+    padding: 12px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#inputNuevaTarea{
+    width: 300px;
+    height: 35px;
+}
+/*fin de header*/
+/*inicio de main*/
+main{
+    background-color: cadetblue;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+   
+    height: 60vh;
+    padding: 100px;
+    background-color: beige;
+    border: 5px solid  cornsilk;
+}
+
+#misTareas{
+    margin: 30px;
+
+}
+
+#misTareas>li{
+    margin: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px 8px 15px 30px;
+    transition: 0.5s;
+    border: 1px solid gray;
+    
+}
+
+li:hover{
+    background: #ddd;
+    border-radius: 30px;
+}
+
+li.checked{
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
 
