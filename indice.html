@@ -16,14 +16,39 @@
 <body>
 
     <header class="">
-
+        <div class="header"></div>
         <h1 class="">TODO´S</h1>
+
 
         <h2>La listaca de traca pa tus tareas cotidianas</h2>
 
-        <input id="inputNuevaTarea" type="text" placeholder="añadir nueva tarea...">
 
-        <span onclick="nuevaTarea()" class="botonNuevaTarea">añadir a la lista</span>
+        <div class="añadirTareas">
+            <input id="inputNuevaTarea" type="text" placeholder="añadir nueva tarea...">
+
+            <select name="prioridad" id="">
+                <option hidden selected value="">prioridad</option>
+                <option value="">urgente</option>
+                <option value="">diaria</option>
+                <option value="">mensual</option>
+            </select>
+
+            <!-- <span onclick="nuevaTarea()" class="botonNuevaTarea">añadir a la lista</span> -->
+
+            <button>añadir a la lista</button>
+
+        </div>
+
+        <div class="buscadorTareas">
+            <input id="inputBuscarTarea" type="text" placeholder="buscar tarea...">
+            <select name="prioridad" id="">
+                <option hidden selected value="">prioridad</option>
+                <option value="">urgente</option>
+                <option value="">diaria</option>
+                <option value="">mensual</option>
+            </select>
+            <button>buscar</button>
+        </div>
 
     </header>
 
@@ -32,12 +57,33 @@
         <div class="container">
 
             <section class="cuadroTareas">
+
                 <ul id="misTareas">
-                    <li>Sacar al perro</li>
-                    <li>ir al dentista</li>
-                    <li>jugar al futbol</li>
-                    <li>comer pipas</li>
+                    <li>
+                        <p>
+                            Sacar al perro
+                        </p>
+
+                        <div href="#" title="eliminar">
+                            <i class="fa-solid fa-delete-left"></i>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <p> ir al dentista </p>
+
+                        <div href="#" title="eliminar">
+                            <i class="fa-solid fa-delete-left"></i>
+                        </div>
+
+                    </li>
+
                 </ul>
+
+
+
+
             </section>
 
         </div>
