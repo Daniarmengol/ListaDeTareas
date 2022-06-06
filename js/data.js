@@ -37,9 +37,11 @@ function addTarea() {
         prioridad: document.getElementById('priorityButton').value
     };
 
+    tareas.push(tarea);
+
+    console.log(tareas);
 
 
-    console.log(tarea);
 
 }
 
