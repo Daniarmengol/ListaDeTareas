@@ -1,6 +1,7 @@
 const tareas = new Array();
 document.getElementById('add').addEventListener('click', addTarea);
-
+ocument.getElementById('inputBuscarTarea').addEventListener('click', buscadorTareas);
+ocument.getElementById('buscarPorPrioridad').addEventListener('click', buscadorTareas);
 
 //Esta función debe crear una nueva tarea según lo que contenga el input y el select, y ñluego. añadirla al array de tareas
 function addTarea() {
@@ -38,6 +39,10 @@ function pintarTareas() {
     })
 }
 
+function buscadorTareas{
+
+
+}
 
 
 /* printCharacters(pList, pDom) {
