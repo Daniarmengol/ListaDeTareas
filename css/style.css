@@ -1,2 +1,131 @@
 @import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Karla:wght@300&family=Ubuntu:wght@400;700&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+/* font-family: 'Concert One', cursive;
+   font-family: 'Karla', sans-serif;
+   font-family: 'Ubuntu', sans-serif; */
+
+header{
+    display: inline-block;
+   text-align: center;
+   background-color: burlywood;
+   width: 100vw;
+   /* height: 220px; */
+   
+}
+
+header>h1{
+  padding: 20px;
+  font-size: 41px;
+  font-family: 'Concert One', cursive;
+  text-align: left;
+  padding-left: 130px;
+
+}
+
+header>h2{
+    font-size: 35px;
+    margin-bottom: 45px;
+    
+
+}
+
+button{
+    background-color: cadetblue;
+    color: black;
+    padding: 5px;
+    border-radius: 6px;
+    margin-left: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+button:hover{
+    background-color: tomato;
+    transition: 0.4s;
+    transform: rotateZ(-5deg);
+}
+
+#inputNuevaTarea{
+    width: 300px;
+    height: 35px;
+}
+
+.buscadorTareas{
+    padding: 2em;
+    margin-right: 56px;
+
+}
+
+#inputBuscarTarea{
+    width: 300px;
+    height: 35px;
+    
+}
+
+select{
+    margin: 0 1em;
+    padding: 6.5px;
+    border-radius: 4px;
+}
+
+/*fin de header*/
+/*inicio de main*/
+
+
+main{
+    background-color: cadetblue;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.container{
+   
+    height: 60vh;
+    background-color: beige;
+    border: 5px solid  cornsilk;
+}
+
+#misTareas{
+    margin: 30px;
+
+}
+
+#misTareas>li{
+    margin: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px 8px 15px 30px;
+    transition: 0.5s;
+    border: 1px solid gray;
+    
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+}
+
+li:hover{
+    background: #ddd;
+    border-radius: 30px;
+}
+
+li>div{
+    color: cadetblue;
+    margin-right: 15px;
+}
+
+li>div:hover{
+color: tomato;
+transition: 0,6s;
+}
+
+
+
+
 
