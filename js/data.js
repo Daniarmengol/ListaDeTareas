@@ -1,30 +1,4 @@
-const tareas = new Array({
-    id: 1,
-    nombre: 'Tarea 1',
-    prioridad: "urgente"
-
-},
-    {
-        id: 2,
-        nombre: 'Tarea 2',
-        prioridad: "tan poco es pa tanto"
-
-    },
-    {
-        id: 3,
-        nombre: 'Tarea 3',
-        prioridad: "pa mañana"
-
-    },
-    {
-        id: 4,
-        nombre: 'Tarea 4',
-        prioridad: "urgente"
-
-    },
-
-
-);
+const tareas = new Array();
 document.getElementById('add').addEventListener('click', addTarea);
 
 
@@ -38,11 +12,63 @@ function addTarea() {
     };
 
     tareas.push(tarea);
-
-    console.log(tareas);
-
-
+    pintarTareas();
 
 }
 
+//Función nueva para pintar el array
+
+function pintarTareas() {
+    const ul = document.getElementById('misTareas');
+    ul.innerHTML = "";
+    tareas.forEach(tarea => {
+
+        let li = document.createElement('li');
+        li.classList.add(tarea.prioridad);
+        li.innerHTML = `<p>
+       ${tarea.nombre}
+       </p>
+
+        <div href="#" title="eliminar">
+       <i class="fa-solid fa-delete-left"></i>
+       </div>`;
+
+        ul.appendChild(li);
+
+    })
+}
+
+
+
+/* printCharacters(pList, pDom) {
+    pDom.innerHTML = "";
+    pList.forEach(character => this.printOneCharacter(character, pDom));
+}
+
+printOneCharacter(pCharacter, pDom) {
+    let article = document.createElement('article');
+    article.classList.add('col-12', 'col-md-6', 'col-lg-3');
+    let claseColor = "";
+
+    if (pCharacter.status === 'Alive') {
+        claseColor = 'text-success';
+    } else if (pCharacter.status === 'Dead') {
+        claseColor = 'text-danger'
+    } else if (pCharacter.status === 'unknown') {
+        claseColor = 'text-warning'
+    } else {
+        claseColor = "";
+    }
+
+    article.innerHTML = `<div class="card">
+                        <img src="${pCharacter.image}" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">${pCharacter.name}</h5>
+                            <p class="card-text">Estado: <span class="${claseColor}">${pCharacter.status}</span></p>
+                        </div>
+                    </div>`
+
+    pDom.appendChild(article);
+
+} */
 

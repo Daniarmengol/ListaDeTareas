@@ -101,7 +101,6 @@ main{
     cursor: pointer;
     padding: 15px 8px 15px 30px;
     transition: 0.5s;
-    border: 1px solid gray;
     
 }
 
@@ -125,6 +124,17 @@ color: tomato;
 transition: 0,6s;
 }
 
+.urgente{
+    border: 5px solid tomato;
+}
+
+.diaria{
+    border: 5px solid rgb(46, 132, 46);
+}
+
+.mensual{
+    border: 5px solid rgb(203, 203, 69);
+}
 
 
 
