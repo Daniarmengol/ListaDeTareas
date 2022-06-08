@@ -3,7 +3,7 @@ document.getElementById('add').addEventListener('click', addTarea);
 document.getElementById('inputBuscarTarea').addEventListener('input', buscadorTareas);
 document.getElementById('buscarPorPrioridad').addEventListener('change', buscadorTareas);
 
-//Esta función debe crear una nueva tarea según lo que contenga el input y el select, y ñluego. añadirla al array de tareas
+
 function addTarea() {
 
     const tarea = {
@@ -18,11 +18,11 @@ function addTarea() {
 
 }
 
-//Función nueva para pintar el array
-
 function pintarTareas(pList) {
     const ul = document.getElementById('misTareas');
     ul.innerHTML = "";
+    //Añadir en el div el evento click que llama a la función de borrado y le pasa por parametro el id de la tarea
+    //ej:  <div href="#" onclick="deleteTarea(tarea.id)" title="eliminar">
     pList.forEach(tarea => {
 
         let li = document.createElement('li');
@@ -38,15 +38,13 @@ function pintarTareas(pList) {
         ul.appendChild(li);
 
     })
+
+    //Setear el array pList en localStorage
 }
 
 function buscadorTareas() {
-    //Recoger los value del input y el select y asignarlos a nuevas constantes
     const inputData = document.getElementById('inputBuscarTarea').value;
     const selectData = document.getElementById('buscarPorPrioridad').value;
-
-    //Crear un nuevo array que su valor sea el array tareas según lo que quiera filtrar el usuario
-    // ejemplo: tareas.filter()
 
     let tareasFiltered = [];
     if (inputData !== '' || selectData !== 'all') {
@@ -57,49 +55,15 @@ function buscadorTareas() {
     }
 
 
-    /*  if(selectData === 'all'){
-         
-     } */
-
     pintarTareas(tareasFiltered);
 
 
-    //Pintar las tareas ya filtrada
-    //ejemplo: pintarTareas(nuevoArray);
-
-
 }
 
+//Crear función checkLocalStorage que compruebe si existe infromación guardada, y si existe, pintarla. Hay que llamar a esta función nada más empezar.
+//ej: function checkLocalStorage(){...}
+//checkLocalStorage()
 
-/* printCharacters(pList, pDom) {
-    pDom.innerHTML = "";
-    pList.forEach(character => this.printOneCharacter(character, pDom));
-}
-
-printOneCharacter(pCharacter, pDom) {
-    let article = document.createElement('article');
-    article.classList.add('col-12', 'col-md-6', 'col-lg-3');
-    let claseColor = "";
-
-    if (pCharacter.status === 'Alive') {
-        claseColor = 'text-success';
-    } else if (pCharacter.status === 'Dead') {
-        claseColor = 'text-danger'
-    } else if (pCharacter.status === 'unknown') {
-        claseColor = 'text-warning'
-    } else {
-        claseColor = "";
-    }
-
-    article.innerHTML = `<div class="card">
-                        <img src="${pCharacter.image}" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">${pCharacter.name}</h5>
-                            <p class="card-text">Estado: <span class="${claseColor}">${pCharacter.status}</span></p>
-                        </div>
-                    </div>`
-
-    pDom.appendChild(article);
-
-} */
+//Crear función de borrado, que recibe por parametro el id de la tarea, la borra del array y pinta de nuevo
+// ej: funtion deleteTarea(id){...}
 
