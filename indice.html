@@ -28,7 +28,7 @@
             <input id="inputNuevaTarea" type="text" placeholder="añadir nueva tarea...">
 
             <select name="prioridad" id="priorityButton">
-                <option value="">prioridad</option>
+                <option value="" disabled selected hidden>prioridad</option>
                 <option value="urgente">urgente</option>
                 <option value="diaria">diaria</option>
                 <option value="mensual">mensual</option>
@@ -42,8 +42,8 @@
 
         <div class="buscadorTareas">
             <input id="inputBuscarTarea" type="text" placeholder="buscar tarea...">
-            <select name="prioridad" id="">
-                <option value="all">prioridad</option>
+            <select name="prioridad" id="buscarPorPrioridad">
+                <option value="all">todas las prioridades</option>
                 <option value="urgente">urgente</option>
                 <option value="diaria">diaria</option>
                 <option value="mensual">mensual</option>
@@ -62,7 +62,7 @@
             <section class="cuadroTareas">
 
                 <ul id="misTareas">
-                    <li>
+                    <!--   <li class="prioridad">
                         <p>
                             Sacar al perro
                         </p>
@@ -73,14 +73,15 @@
 
                     </li>
 
-                    <li>
+                    <li class="prioridad">
                         <p> ir al dentista </p>
 
                         <div href="#" title="eliminar">
                             <i class="fa-solid fa-delete-left"></i>
                         </div>
 
-                    </li>
+                    </li> -->
+
 
                 </ul>
 
